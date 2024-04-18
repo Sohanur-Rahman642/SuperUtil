@@ -1,3 +1,4 @@
-module.exports = function printMsg() {
-  console.log("This is a message from the demo package");
-};
+const reverseString = require("./string/reverse-string");
+const countSubstringOccurrences = require("./string/count-substring-occurrence");
+
+module.exports = { reverseString, countSubstringOccurrences };
