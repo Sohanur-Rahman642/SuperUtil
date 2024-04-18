@@ -46,7 +46,7 @@ converted to the given timezone**
 
 ## Setup 
 - **Open the Codesandbox url in the browser & sign up**
-- **Open the terminal into the root folder & run 'npm run test'**
+- **Open the terminal into the root folder & run `npm run test`**
 - **Voila! that's everything**
 
 ## Usage 
