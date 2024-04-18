@@ -13,3 +13,4 @@ converted to the given timezone**
 
 ## Usage 
 I have maed a command line interface based on the library. All you need to input the number of a functionality to check & follow the instructions.
+ <img width="250" height="500" src="images/image.png"> &emsp;
