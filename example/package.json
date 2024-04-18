@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "'example app to test superutil functionalities'",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "superutil": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Sohan",
+  "license": "ISC"
+}

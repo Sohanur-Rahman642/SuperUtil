@@ -1,0 +1,11 @@
+{
+  "name": "superutil",
+  "version": "1.0.0",
+  "description": "A js utility library",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Sohan",
+  "license": "ISC"
+}
