@@ -1,6 +1,4 @@
 module.exports = function deepMerge(target, source) {
-  console.log("target ", target);
-  console.log("source ", source);
   for (const key in source) {
     if (
       target.hasOwnProperty(key) &&

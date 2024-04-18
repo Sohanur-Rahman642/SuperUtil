@@ -1,5 +1,10 @@
 import readline from "readline";
-import { reverseString, countSubstringOccurrences, deepMerge } from "superutil";
+import {
+  reverseString,
+  countSubstringOccurrences,
+  deepMerge,
+  formatDateInTimezone,
+} from "superutil";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -51,10 +56,25 @@ function chooseOperation() {
               JSON.parse(targetObj),
               JSON.parse(sourceObj)
             );
+            console.log("target ", JSON.parse(targetObj));
+            console.log("source ", JSON.parse(sourceObj));
             console.log("merged object: ", mergedObj);
           } catch (error) {
             console.log(error);
           }
+
+          rl.close();
+          break;
+        case "4":
+          const inputDate = await takeInput("Enter a Date: ");
+          const inputTimeZone = await takeInput(
+            "Enter your preffered timezone: "
+          );
+
+          const date = new Date(inputDate);
+          const timezone = inputTimeZone;
+
+          console.log("formatted date: ", formatDateInTimezone(date, timezone));
 
           rl.close();
           break;
