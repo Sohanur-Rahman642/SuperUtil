@@ -1,0 +1,14 @@
+{
+  "name": "superutil",
+  "version": "1.0.0",
+  "description": "A JavaScript utility library",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "cd superutil && npm link && cd .. && cd example && npm link superutil && node index.js"
+  },
+  "author": "Sohan",
+  "license": "ISC"
+}
