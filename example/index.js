@@ -1,5 +1,5 @@
 import readline from "readline";
-import { reverseString, countSubstringOccurrences } from "superutil";
+import { reverseString, countSubstringOccurrences, deepMerge } from "superutil";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -16,7 +16,12 @@ function takeInput(question) {
 
 function chooseOperation() {
   rl.question(
-    "Choose one option:\n1. Reverse a string\n2. Count the number of sub-string in a string\nChoose-> ",
+    "Choose one option:" +
+      "\n1. Reverse a string" +
+      "\n2. Count the number of sub-string in a string" +
+      "\n3. Deep Merge two objects" +
+      "\n4. Format a date with your timezone" +
+      "\nChoose-> ",
     async (option) => {
       switch (option.trim()) {
         case "1":
@@ -31,6 +36,26 @@ function chooseOperation() {
             "Total number of substring presence is: ",
             countSubstringOccurrences(str, subStr)
           );
+          rl.close();
+          break;
+        case "3":
+          try {
+            const targetObj = await takeInput(
+              "Enter the first object as JSON format: "
+            );
+            const sourceObj = await takeInput(
+              "Enter the second object as JSON format: "
+            );
+
+            const mergedObj = deepMerge(
+              JSON.parse(targetObj),
+              JSON.parse(sourceObj)
+            );
+            console.log("merged object: ", mergedObj);
+          } catch (error) {
+            console.log(error);
+          }
+
           rl.close();
           break;
         default:
