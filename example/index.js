@@ -66,7 +66,17 @@ function chooseOperation() {
           rl.close();
           break;
         case "4":
-          const inputDate = await takeInput("Enter a Date: ");
+          const inputDate = await takeInput(
+            "Enter a Date (Ex: 2024-04-18T12:00:00): "
+          );
+
+          console.log(
+            "Some example timezone: " +
+              "\n -> America/New_York" +
+              "\n -> Asia/Kabul" +
+              "\n -> Asia/Dhaka"
+          );
+
           const inputTimeZone = await takeInput(
             "Enter your preffered timezone: "
           );
