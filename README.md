@@ -66,5 +66,5 @@ I have maed a command line interface based on the library. All you need to input
   <br/>
   **Email: sohanasif@gmail.com**
   <br/>
-  **Phone: ++8801782458174**
+  **Phone: +8801782458174**
   
